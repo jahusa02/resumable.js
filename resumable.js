@@ -849,14 +849,14 @@
                     // Add data from the query options
                     data = bytes;
                     $h.each(query, function (k, v) {
-                        params.push([encodeURIComponent(parameterNamespace + k), encodeURIComponent(v)].join('='));
+                        //params.push([encodeURIComponent(parameterNamespace + k), encodeURIComponent(v)].join('='));
                     });
                 } else {
                     // Add data from the query options
                     data = new FormData();
                     $h.each(query, function (k, v) {
                         data.append(parameterNamespace + k, v);
-                        params.push([encodeURIComponent(parameterNamespace + k), encodeURIComponent(v)].join('='));
+                        //params.push([encodeURIComponent(parameterNamespace + k), encodeURIComponent(v)].join('='));
                     });
                     if ($.getOpt('chunkFormat') == 'blob') {
                         data.append(parameterNamespace + $.getOpt('fileParameterName'), bytes, $.fileObj.fileName);
